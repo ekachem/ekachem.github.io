@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+.div1 {
+    float: left;
+    height: 1200px;
+    width: 15%;
+    background-color: white;
+    border: 1px solid black;
+     background:url(C:/Users/ekadashi/Desktop/My_PhD/JTCC_paper/toc.jpg);
+}
+.div2 {
+    float: left;
+    height: 1200px;
+    width: 70%;
+    background-color: powderblue;
+     border: 1px solid black;
+    padding: 50px;
+}
+.div3 {
+    float: left;
+    height: 1200px;
+    width: 15%;
+    background-color: white;
+     border: 1px solid black;
+}
+
+
+</style>
+</head>
+
+<body>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Research</a>
+    <div class="dropdown-content">
+      <a href="#">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="#">Resources</a>
+    </div>
+  </li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="#">Academic</a>
+      <a href="#">Professional</a>
+      <a href="#">Other</a>
+    </div>
+  </li>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Plotting-Tools</a>
+    <div class="dropdown-content">
+      <a href="#">Gnuplot</a>
+      <a href="#">Xmgrace</a>
+      <a href="#">Pylab&MatPlotlib</a>
+      <a href="#">Matlab</a>
+      <a href="#">Others</a>
+    </div>
+  </li>
+</ul>
+<header style="color:black;font-size:40px;background-color:orange;text-align: center;"><b>My Research Publications </b></header>
+<h3 style="color:blue;font-size:20px;"> <br> </h3>
+
+<header style="background-color:greenyellow;color:black;font-size:40px;text-align: center;"><b> <br> </b></header>
+
+<body>
+<!-- Left box-column -->
+<div class="div1">Empty Space
+
+</div>
+<div class="div2">
+
+<ol reversed=""> <!-- ordered list -->
+<h1><center>------------------ From Postdoc ------------------- <br></center></h1>
+<li style="font-size:20px;">E. Pradhan, R. Magyar, and A. V. Akimov, "Scaling relationships for nonadiabatic energy relaxation times in warm dense matter: toward understanding the equation of state", <i>Phys. Chem. Chem. Phys.</i>, <b>2016</b>, 18, 32466-32476 <a href="http://pubs.rsc.org/en/content/articlelanding/2016/cp/c6cp06827h#!divAbstract" target="_blank">[read-the-article]</a></li>
+<h1><center>------------------ From PhD ------------------- <br></center></h1>
+<li style="font-size:20px;">E. Pradhan, "Potential Energy Surfaces for Quantum Dynamics Simulations: From ab initio Computations to Vibrational State Determinations", <i>https://era.library.ualberta.ca/files/c9z903000r/Pradhan_Ekadashi_201601_PhD.pdf</i>, <b>2017</b>, <a href="https://era.library.ualberta.ca/files/c9z903000r/Pradhan_Ekadashi_201601_PhD.pdf" target="_blank">[read-my-thesis]</a> <a href="#">[Thesis]</a></li>
+<li style="font-size:20px;">E. Pradhan, A. Brown, "HFCO S1 Potential Energy Surfaces (PESs) in a sum-of-product form using Neural Network exponential fitting procedure", <i>Chem. Phys.</i>, <b>to-be-submitted 2017</b>, ?, ?-? <a href="#">[H. D. Meyer Special issue]</a><a href="#" target="_blank">[read-article]</a></li>
+<li style="font-size:20px;">E. Pradhan and A. Brown, "A Ground State Potential Energy Surface for HONO based on a Neural Network with Exponential Fitting Functions", <i>Phys. Chem. Chem. Phys.</i>, <b>2017</b>, ?, ?-? <a href="#" target="_blank">[Article in minor review]</a></li>
+
+<li style="font-size:20px;">A. Brown and E. Pradhan, "Fitting Potential Energy Surfaces to SUM-OF-PRODUCTS form with Neural Networks using Exponential Neurons", <i>J. Theor. Comput. Chem.</i>, <b>2017</b>, 134, 1730001-? <a href="#">[Review article]</a><a href="http://www.worldscientific.com/doi/abs/10.1142/S0219633617300014" target="_blank">[read-the-article]</a></li>
+<li style="font-size:20px;">E. Pradhan and A. Brown, "Neural Network Exponential Fitting of a Potential Energy Surface with Multiple Minima: Application to HFCO", <i>J. Mol. Spectrosc.</i>, <b>2016</b>, 330, 158-164 <a href="#">[R. L. Roy Special issue]<a href="http://www.sciencedirect.com/science/article/pii/S0022285216301035" target="_blank">[read-article]</a></li>
+<li style="font-size:20px;">E. Pradhan and A. Brown, "Vibrational energies for HFCO using a neural network sum of exponentials potential energy surface", <i>J. Chem. Phys.</i>, <b>2016</b>, 144, 174305-? <a href="http://aip.scitation.org/doi/10.1063/1.4948440" target="_blank">[read-the-article]</a>
+        <a href="http://cdn.scitation.org/journals/content/jcp/2016/jcp.2016.144.issue-17/1.4948440/production/suppl/esi_hfco_revised.pdf?b92b4ad1b4f274c70877518710abb28b2298b364ff475b6be2d0abf4b650fdecdb345b76a88c806181b2beda962ddaaceffc727c41c9936a4c001bb3f0b72aa542c21fb5c714def785644ee291e568076c1233b36864aa8abd8f637587d68cb26e1ffa5c28b22191419940cf073b642ff1ce4b84f34e3b16f52410311bb9f18cda37f0d51fcfb94593af50bfdcbe94dc" target="_blank">[Supplementary material]</a></li>
+<li style="font-size:20px;">E. Pradhan, J. L. Carreon-Macedo, J. E. Cuervo, M. Schroder, and A. Brown, "Ab Initio Potential Energy and Dipole Moment Surfaces for CS2: Determination of Molecular Vibrational Energies", <i>J. Phys. Chem. A</i>, <b>2013</b>, 117(32), 6925-6931 <a href="http://pubs.acs.org/doi/abs/10.1021/jp309651r" target="_blank">[read-article]</a> <a href="http://pubs.acs.org/doi/suppl/10.1021/jp309651r" target="_blank">[Supplementary material]</a></li>
+
+<h1><center>------------------ From MSc ------------------- <br></center></h1>
+<li style="font-size:20px;">E. Pradhan and B. L. Tembe, "Solvation shell dynamics of Na+ and Cl- ion pairs in selected water-DMSO mixtures", <i>Procedia Comput. Sci.</i>, <b>2010</b>, 1(1), 1165-1173 <a href="http://www.sciencedirect.com/science/article/pii/S1877050910001316" target="_blank">[read-the-article]</a></li>
+
+</ol>
+
+</div>
+<!-- The right side box -->
+<div class="div3">Related toc-graphic may go here as well. <img src="C:/Users/Ekadashi1/Desktop/res1/c2h4_CI_orth_type0.png" alt="" width="192" height="144">
+
+J. Phys. Chem. A article-2013
+
+<img src="http://pubs.acs.org/appl/literatum/publisher/achs/journals/content/jpcafh/2013/jpcafh.2013.117.issue-32/jp309651r/production/images/medium/jp-2012-09651r_0007.gif" alt="" width="190" height="100"">
+
+J. Mol. Spec article-2016
+
+<img src="http://ars.els-cdn.com/content/image/1-s2.0-S0022285216301035-fx1.jpg" alt="" width="190" height="170"">
+
+<p>The image is a link. You can click on it.</p>
+
+<a href="http://pubs.rsc.org/en/content/articlelanding/2016/cp/c6cp06827h#!divAbstract" target="_blank">
+  <img src="C:/Users/Ekadashi1/Desktop/res1/c2h4_CI_orth_type0.png" alt="" style="width:192px;height:144px;border:0;"> Click-to-explore-more!
+</a>
+
+
+</div>
+
+
+</body>
+</html>
