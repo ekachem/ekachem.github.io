@@ -1,6 +1,153 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+
+</style>
+</head>
+
 <body>
-Hi there, I am EkIndia and this is my website.
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Research</a>
+    <div class="dropdown-content">
+      <a href="RESEARCH/projects.html">Projects</a>
+      <a href="RESEARCH/publications.html">Publications</a>
+      <a href="RESEARCH/resources.html">Resources</a>
+    </div>
+  </li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="academic.html">Academic</a>
+      <a href="proffesional.html">Professional</a>
+      <a href="other.html">Other</a>
+    </div>
+  </li>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Plotting-Tools</a>
+    <div class="dropdown-content">
+      <a href="gnuplot.html">Gnuplot</a>
+      <a href="xmgrace.html">Xmgrace</a>
+      <a href="pylab.html">Pylab&MatPlotlib</a>
+      <a href="matlab.html">Matlab</a>
+      <a href="excel.html">MS-Excel</a>
+      <a href="others.html">Others</a>
+    </div>
+  </li>
+</ul>
+<header>WELCOME TO MY WEBPAGE</header>
+<h3>A range of genral science as well as computational chemistry software tools that I have come across are included in this website.</h3>
+<p> I love using CYGWIN - provides Linux environment in Windows. You can do almost all sort of file operations, install and run codes like, Python, C++, FORTRAN, etc. using CYGWIN.</p>
+
+<footer><b>Nevigate through sidebar to explore useful CYGWIN Tips!</b></footer>
+<nav>
+  <ul>
+    <li><a href="#">Download and Installation</a></li>
+    <br>
+    <li><a href="#">Editors and Math</a></li>
+    <br>
+    <li><a href="#">Compiling C++, PYTHON, FORTRAN</a></li>
+    <br>
+    <li><a href="#">CUSTOMIZING TERMINAL</a></li>
+    <br>
+    <li><a href="#">GNUPLOT USE from CYGWIN</a></li>
+  </ul>
+</nav>
+<article>
+  <h1>How to Download</h1>
+  <p>CYGWIN can be download from the website <a href="https://www.cygwin.com/" target="_blank">(go-to-CYGWIN-webpage)</a> - its free. Look through "Current CYGWIN DLL Versions" section and choose right version for installation, i.e., 32-bit or 64-bit installation. They also have additional options for fresh installation and any firther updates.</p>
+
+</article>
+
+
+<footer>Copyright &copy; ekIndigo-at-github.io</footer>
+
+
 </body>
 </html>
