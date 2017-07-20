@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<title>homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+<style>
 header, footer {
     padding: 1em;
     color: white;
-    background-color: black;
+    background-color: #F87217;
     clear: left;
     text-align: center;
 }
@@ -77,14 +80,20 @@ nav ul a {
     text-decoration: none;
 }
 
+    body {
+    padding: 15em;
+    margin-top: -14em;
+    background-color: #98AFC7;
+    }
+
 article {
     margin-left: 170px;
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
 }
-
-
+.mySlides {display:none}
+.demo {cursor:pointer}
 </style>
 </head>
 
@@ -120,32 +129,40 @@ article {
     </div>
   </li>
 </ul>
-<header>WELCOME TO MY WEBPAGE</header>
-<h3>A range of genral scientific as well as computational chemistry softwares tools that I have come across are included in this website.</h3>
-<p> I love using CYGWIN - provides Linux environment in Windows. You can do almost all sort of file operations, install and run codes like, Python, C++, FORTRAN, etc. using CYGWIN.</p>
+<center><h3>Welcome to my research webpage: Spectroscopy and Quantum Dynamics</h3></center>
+<footer><b>Research Highlights!</b></footer>
+</body>
+<body>
+	<center>
+<div class="w3-content w3-section" style="max-width:600px">
+  <img class="mySlides w3-animate-fading" src="slpc1.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc2.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc3.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc4.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc5.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc6.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc7.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc8.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="slpc9.png" style="width:100%">
+</div>
+	</center>
 
-<footer><b>Nevigate through sidebar to explore useful CYGWIN Tips!</b></footer>
-<nav>
-  <ul>
-    <li><a href="#">Download and Installation</a></li>
-    <br>
-    <li><a href="#">Editors and Math</a></li>
-    <br>
-    <li><a href="#">Compiling C++, PYTHON, FORTRAN</a></li>
-    <br>
-    <li><a href="#">CUSTOMIZING TERMINAL</a></li>
-    <br>
-    <li><a href="#">GNUPLOT USE from CYGWIN</a></li>
-  </ul>
-</nav>
-<article>
-  <h1>How to Download</h1>
-  <p>CYGWIN can be download from the website <a href="https://www.cygwin.com/" target="_blank">(go-to-CYGWIN-webpage)</a> - its free. Look through "Current CYGWIN DLL Versions" section and choose right version for installation, i.e., 32-bit or 64-bit installation. They also have additional options for fresh installation and any further updates.</p>
+<script>
+var myIndex = 0;
+carousel();
 
-</article>
-
-
-<footer>Copyright &copy; ekIndigo-at-github.io</footer>
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
 
 
 </body>
