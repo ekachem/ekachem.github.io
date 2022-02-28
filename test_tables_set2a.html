@@ -6,26 +6,49 @@
 <h1>Energy Converter</h1>
 <hr>
 <p class="intro">Learn how to create a Length converter with HTML and JavaScript.</p>
+<table style="height: 126px;" border="10" width="789">
+<tbody>
+<tr>
+<td style="width: 255.656px;">eV</td>
+<td style="width: 255.656px;">cm<sup>-1</sup></td>
+<td style="width: 255.688px;">Hartree/au</td>
+<td style="width: 255.688px;">nm</td>
+<td style="width: 255.688px;">Rydberg</td>
+<td style="width: 255.688px;">kcal/mol</td>
+<td style="width: 255.688px;">kj/mol</td>
+</tr>
+<tr>
+<td style="width: 255.656px;"><input id="inputEv" class="w3-input w3-border" type="number" placeholder="eV" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.656px;"><input id="inputCm" class="w3-input w3-border" type="number" placeholder="cm-1" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.688px;"><input id="inputHa" class="w3-input w3-border" type="number" placeholder="Hartree" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.688px;"><input id="inputNm" class="w3-input w3-border" type="number" placeholder="nm" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.688px;"><input id="inputRy" class="w3-input w3-border" type="number" placeholder="Rydberg" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.688px;"><input id="inputKcal" class="w3-input w3-border" type="number" placeholder="kcal/mol" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+<td style="width: 255.688px;"><input id="inputKj" class="w3-input w3-border" type="number" placeholder="kj/mol" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)"></td>
+</tr>
+</tbody>
+</table>
+
 <hr>
 <div class="w3-container w3-green">
   <h2>Length Converter</h2>
 </div>
 
 <div class="w3-row-padding" style="margin:0 -16px">
-  <p style="margin-left:8px;margin-bottom:4px;">Type a value in any of the fields to convert between Length measurements:</p>
-  <div class="w3-half w3-margin-top">
+  <p style="margin-left:18px;margin-bottom:14px;">Type a value in any of the fields to convert between Length measurements:</p>
+  <div class="w3-half w3-margin-top" style="margin-left:18px;margin-bottom:14px;">
     <label>Meters</label>
     <input id="inputMeters" class="w3-input w3-border" type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
   </div>
-  <div class="w3-half w3-margin-top">
+  <div class="w3-half w3-margin-top" style="margin-left:18px;margin-bottom:14px;">
     <label>Inches</label>
     <input id="inputInches" class="w3-input w3-border" type="number" placeholder="Inches" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
   </div>
-  <div class="w3-half w3-margin-top">
+  <div class="w3-half w3-margin-top" style="margin-left:18px;margin-bottom:14px;">
     <label>Yards</label>
     <input id="inputYards" class="w3-input w3-border" type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
   </div>
-  <div class="w3-half w3-margin-top">
+  <div class="w3-half w3-margin-top" style="margin-left:18px;margin-bottom:14px;">
     <label>Kilometers</label>
     <input id="inputKilometers" class="w3-input w3-border" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
   </div>
@@ -51,6 +74,13 @@
 <script>
 function lengthConverter(source,valNum) {
   valNum = parseFloat(valNum);
+  var inputEv = document.getElementById("inputEv");
+  var inputCm = document.getElementById("inputCm");
+  var inputHa = document.getElementById("inputHa");
+  var inputNm = document.getElementById("inputNm");
+  var inputRy = document.getElementById("inputRy");
+  var inputKcal = document.getElementById("inputKcal");
+  var inputKj = document.getElementById("inputKj");
   var inputFeet = document.getElementById("inputFeet");
   var inputMeters = document.getElementById("inputMeters");
   var inputInches = document.getElementById("inputInches");
@@ -58,6 +88,66 @@ function lengthConverter(source,valNum) {
   var inputYards = document.getElementById("inputYards");
   var inputKilometers = document.getElementById("inputKilometers");
   var inputMiles = document.getElementById("inputMiles");
+
+  if (source=="inputEv") {
+    inputCm.value=(valNum*8065.54).toFixed(2);
+    inputHa.value=(valNum/27.211399).toFixed(8);
+    inputNm.value=(1239.84/valNum).toFixed(3);
+    inputRy.value=(valNum*2.0/27.211399).toFixed(8);
+    inputKcal.value=(valNum*23.06054).toFixed(5);
+    inputKj.value=(valNum*23.06054*4.184).toFixed(5);
+  }
+
+  if (source=="inputCm") {
+    inputEv.value=(valNum/8065.54).toFixed(8);
+    inputHa.value=(valNum/219474.63).toFixed(8);
+    inputNm.value=(8065.54*1239.842/valNum).toFixed(2);
+    inputRy.value=(valNum*2.0/219474.63).toFixed(8);
+    inputKcal.value=(valNum/349.75501).toFixed(8);
+    inputKj.value=(valNum*4.184/349.75501).toFixed(8);
+  }
+  if (source=="inputHa") {
+    inputCm.value=(valNum*219474.63).toFixed(2);
+    inputEv.value=(valNum*27.211399).toFixed(3);
+    inputNm.value=(0.03675*1239.842/valNum).toFixed(2);
+    inputRy.value=(valNum*2.0).toFixed(2);
+    inputKcal.value=(valNum*627.5096).toFixed(5);
+    inputKj.value=(valNum*627.5096*4.184).toFixed(5);
+  }
+  if (source=="inputNm") {
+    inputCm.value=(8065.54*1239.842/valNum).toFixed(2);
+    inputHa.value=(0.03675*1239.842/valNum).toFixed(8);
+    inputEv.value=(1239.842/valNum).toFixed(8);
+    inputRy.value=(2.0*0.03675*1239.842/valNum).toFixed(8);
+    inputKcal.value=(23.06054*1239.842/valNum).toFixed(5);
+    inputKj.value=(96.485*1239.842/valNum).toFixed(5);
+  }
+  if (source=="inputRy") {
+    inputCm.value=(valNum*219474.63/2.0).toFixed(2);
+    inputEv.value=(valNum*27.211399/2.0).toFixed(3);
+    inputNm.value=(2.0*0.03675*1239.842/valNum).toFixed(2);
+    inputHa.value=(valNum/2.0).toFixed(2);
+    inputKcal.value=(valNum*627.5096/2.0).toFixed(5);
+    inputKj.value=(valNum*627.5096*4.184/2.0).toFixed(5);
+  }
+  if (source=="inputKcal") {
+    inputCm.value=(valNum*349.75501).toFixed(2);
+    inputHa.value=(valNum/627.5096).toFixed(8);
+    inputNm.value=(23.06054*1239.842/valNum).toFixed(2);
+    inputRy.value=(valNum*2.0/627.5096).toFixed(8);
+    inputEv.value=(valNum/23.06054).toFixed(8);
+    inputKj.value=(valNum*4.184).toFixed(5);
+  }
+  if (source=="inputKj") {
+    inputCm.value=(valNum*349.75501/4.184).toFixed(2);
+    inputHa.value=(valNum/(627.5096*4.184)).toFixed(8);
+    inputNm.value=(96.485*1239.842/valNum).toFixed(2);
+    inputRy.value=(valNum*2.0/(627.5096*4.184)).toFixed(8);
+    inputEv.value=(valNum/(23.06054*4.184)).toFixed(8);
+    inputKcal.value=(valNum/4.184).toFixed(5);
+  }
+
+
   if (source=="inputFeet") {
     inputMeters.value=(valNum/3.2808).toFixed(2);
     inputInches.value=(valNum*12).toFixed(2);
