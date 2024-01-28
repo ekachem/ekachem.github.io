@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NICS Calculation Tutorial using ORCA</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: navy; }
+        pre { background-color: #f4f4f4; padding: 10px; font-family: monospace; }
+        .note { background-color: #ffffcc; padding: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>NICS Calculation using ORCA: Applications to Organic Molecules</h1>
+
+<h2>Step 1: Setting up ORCA Submission Script on Compute Canada</h2>
+<p>Create a submission script named <code>sub_orca_5.0.1</code> as follows:</p>
+<pre>
+#!/bin/csh
+
+# Set name of input and number of CPUs per node
+# If no ncpus provided, default will be 1
+set input=$1
+if (null$2 == null) then
+  set ncpus=48
+else
+  set ncpus=$2
+endif
+
+# Set memory
+if (null$3 == null) then
+  set ngb=32
+else
+  set ngb=$3
+endif
+
+# Set time limit
+if (null$4 == null) then
+  set nhour=168
+else
+  set nhour=$4
+endif
+
+# Set number of nodes for the calculation
+if (null$5 == null) then
+  set nnode=1
+else
+  set nnode=$5
+endif
+
+# Get rid of the possible .inp extension
+if($input:r.inp == $input) set input=$input:r
+
+set ngb=`echo "scale=0;$ngb*1024 / $ncpus"|bc -l`
+
+echo "running calculations for $input"
+
+# Make the slurm file
+set wd=`pwd`
+echo "#\!/bin/sh" > $input.slurm
+echo "#SBATCH --nodes=$nnode --ntasks-per-node=$ncpus" >> $input.slurm
+echo "#SBATCH --mem=""$ngb""G" >> $input.slurm
+echo "#SBATCH --time=""$nhour"":00:00" >> $input.slurm
+echo "#SBATCH --account=def-account-name" >> $input.slurm
+echo "" >> $input.slurm
+echo " cd $wd" >> $input.slurm
+echo "" >> $input.slurm
+echo "module add StdEnv/2020  gcc/10.3.0  openmpi/4.1.1" >> $input.slurm
+echo "module add orca/5.0.1" >> $input.slurm
+echo "" >> $input.slurm
+echo " /cvmfs/restricted.computecanada.ca/easybuild/software/2020/avx2/MPI/gcc10/openmpi4/orca/5.0.1/orca $input.inp > $input.out" >> $input.slurm
+sbatch $input.slurm
+</pre>
+
+<h2>Step 2: Setting up Your Script Path to .bashrc</h2>
+<p>Add the following line to your <code>.bashrc</code> file:</p>
+<pre>
+export PATH="/path-to-sub_orca_5.0.1/:$PATH"
+</pre>
+
+<h2>Step 3: Loading Intel Fortran Compiler - ifort</h2>
+<p>Check if you have the Intel Fortran compiler and load it:</p>
+<pre>
+module spider intel
+module spider intel/2023.2.1
+module add StdEnv/2023
+module add intel/2023.2.1
+</pre>
+<p>Then compile the Fortran code:</p>
+<pre>
+ifort -o trnrot.x trnrot.f
+</pre>
+
+<h2>Step 4: Run Translation Rotation Fortran Code to Orient Molecule</h2>
+<p>Run the Fortran code as follows:</p>
+<pre>
+./trnrot.x
+</pre>
+<p>This will prompt you for details like the total number of atoms, the software (ORCA or Gamess US), and the atom indices of the ring in clockwise order.</p>
+
+<h2>Step 5: Creating NICS Input for ORCA</h2>
+<p>Create a NICS input file for ORCA with the following template:</p>
+<pre>
+! RHF NMR wB97X cc-pVTZ AutoAux RIJCOSX UseSym TightSCF
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+%maxcore 1024
+%pal
+nprocs 40
+end
+* xyz 2 1
+[Your geometry goes here]
+H: 0.0 0.0  1.0 newgto S 1 1 100000 1 end newauxJKgto S 1 1 200000 1 end
+H: 0.0 0.0 -1.0 newgto S 1 1 100000 1 end newauxJKgto S 1 1 200000 1 end
+*
+</pre>
+
+<h2>Step 6: Submit ORCA Jobs to Compute Canada Cluster</h2>
+<p>Submit the ORCA job with the following command:</p>
+<pre>
+sub_orca_5.0.1 file_name.inp 32 0 2 1
+</pre>
+<p>[32 processors, 0 maximum memory, 2 hours, 1 node]</p>
+
+</body>
+</html>
+
