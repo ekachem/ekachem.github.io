@@ -1,184 +1,106 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<title>publication</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"/>
-<style>
-.fa {
-    padding: 1em;
-    height: 150px;
-    color: white;
-    background-color: grey;
-    background-repeat: no-repeat;
-    background-image: url('pub.png');
-    clear: left;
-    text-align: center;
-}
-
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: #F87217;
-    clear: left;
-    text-align: center;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-nav {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul a {
-    text-decoration: none;
-}
-
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-}
-.div1 {
-    float: left;
-    height: 1200px;
-    width: 5%;
-    background-color: greenyellow;
-}
-.div2 {
-    float: left;
-    height: 1200px;
-    background-color: #98AFC7;
-}
-.div3 {
-    float: left;
-    height: 1200px;
-    width: 5%;
-    background-color: greenyellow;
-}
- .Sameline { 
-    display: inline-block; 
-    border: none; 
-    padding:none;
-    margin:none;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 2px 3px;
-    text-decoration: none;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekadashi Pradhan - Publications</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
     body {
-    padding: 15em;
-    margin-top: -14em;
-    background-color:  #98AFC7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
     }
-
-
-</style>
+    header {
+      padding: 2em;
+      background: #9966ff;
+      color: white;
+      text-align: center;
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: red;
+    }
+    section {
+      margin: 2em auto;
+      max-width: 900px;
+      padding: 1em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .pub-item {
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ddd;
+    }
+    .pub-item strong {
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 0.2em;
+    }
+    .pub-item em {
+      color: #555;
+    }
+    footer {
+      background:#333;
+      color:white;
+      text-align:center;
+      padding:1em;
+    }
+  </style>
 </head>
 <body>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li class="dropdown">
-<a class="dropbtn" href="javascript:void(0)">Research</a>
-<div class="dropdown-content">
-<a href="projects.html">Projects</a>
-<a href="publications.html">Publications</a>
-<a href="#">Resources</a>
+
+<header>
+  <h1>Ekadashi Pradhan</h1>
+  <h3>Scientific Publications</h3>
+</header>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="publications.html">Publications</a>
+  <a href="#apps">Apps</a>
+  <a href="contact.html">Contact</a>
 </div>
-</li>
-<li class="dropdown">
-<a class="dropbtn" href="javascript:void(0)">About</a>
-<div class="dropdown-content">
-<a href="#">Academic</a>
-<a href="#">Professional</a>
-<a href="#">Other</a>
-</div>
-</li>
-<li class="dropdown">
-<a class="dropbtn" href="javascript:void(0)">Plotting-Tools</a>
-<div class="dropdown-content">
-<a href="#">Gnuplot</a>
-<a href="#">Xmgrace</a>
-<a href="#">Pylab&amp;MatPlotlib</a>
-<a href="#">Matlab</a>
-<a href="#">Others</a>
-</div>
-</li>
-<li class="dropdown">
-<a class="dropbtn" href="javascript:void(0)">Useful-Links</a>
-<div class="dropdown-content">
-<a href="conversion_tables.htm" target="_blank">Unit-Conversion-Table</a>
-<a href="#">Others</a>
-</div>
-</li>
-</ul>
-<div class="fa"></div>
-<header style="color:black;font-size:20px;background-color:#98AFC7;text-align: center;"><b>Publications </b></header>
-<body>
-<!-- Left box-column -->
-<div class="div2">
-<ol reversed=""><li style="font-size:16px;"><strong>Photoinduced Long-Distance Charge Transfer in Silicanes: The Stacking Matters</strong><br/><em>G Yao, E Pradhan, Z Yang, T Zeng</em><br/>Nano Letters, 2025 <b>(2025)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:aqlVkmm33-oC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Ligand impacts on band edge energies and excited state splittings of silicane</strong><br/><em>G Yao, E Pradhan, Z Yang, T Zeng</em><br/>Physical Chemistry Chemical Physics 27 (9), 4845-4857, 2025 <b>(2025)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:Wp0gIr-vW9MC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>From flat to twisted–multifunctional phosphacyclic nanocarbons based on Vat Orange 3</strong><br/><em>R Dadgaryeganeh, J LeBlanc, E Pradhan, D Miao, A Hussein, HN Hunter, ...</em><br/>Chemical Science, 2025 <b>(2025)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:4DMP91E08xMC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Adiabat‐to‐Diabat Angle in Seam Space: Renner‐Teller‐Type and Pseudo‐Jahn‐Teller‐Type Problems</strong><br/><em>BJ Chen, E Pradhan, M Nooijen, T Zeng</em><br/>ChemPhysChem 25 (11), e202400130, 2024 <b>(2024)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:4TOpqqG69KYC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Stability and reactivity of alkylidene dihydropyridines</strong><br/><em>M Puzhistky, E Pradhan, A Nikolaev, T Zeng, D Fishlock, A Orellana</em><br/>Organic &amp; Biomolecular Chemistry 22 (20), 4052-4056, 2024 <b>(2024)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:M3ejUd6NZC8C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Cover Feature: Adiabat‐to‐Diabat Angle in Seam Space: Renner‐Teller‐Type and Pseudo‐Jahn‐Teller‐Type Problems (ChemPhysChem 11/2024)</strong><br/><em>BJ Chen, E Pradhan, M Nooijen, T Zeng</em><br/>ChemPhysChem 25 (11), e202400527, 2024 <b>(2024)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:qxL8FJ1GzNcC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>BF3-Catalyzed Intramolecular Fluorocarbamoylation of Alkynes via Halide Recycling</strong><br/><em>EA McKnight, R Arora, E Pradhan, YH Fujisato, AJ Ajayi, M Lautens, ...</em><br/>Journal of the American Chemical Society 145 (20), 11012-11018, 2023 <b>(2023)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:Zph67rFs4hoC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Triplet separation after the fastest intramolecular singlet fission in the smallest chromophore</strong><br/><em>E Pradhan, T Zeng</em><br/>Journal of Chemical Theory and Computation 19 (7), 2092-2101, 2023 <b>(2023)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:kNdYIx-mwKoC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Exploring the Lewis Acidity and Reactivity of Neutral Pentacoordinate Dithienophospholes</strong><br/><em>N Asok, BA Zondag, E Pradhan, M Odagwe, J LeBlanc, JC Walsh, ...</em><br/>Chemistry–A European Journal, e202300173, 2023 <b>(2023)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:KlAtU1dfN6UC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>The Lack of Triplet Fusion for an Intramolecular Singlet Fission Chromophore: The Expected, the Unexpected, and a Reconciliation</strong><br/><em>E Pradhan, T Zeng</em><br/>The Journal of Physical Chemistry Letters 15 (1), 43-50, 2023 <b>(2023)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:_kc_bZDykSQC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>The Unified Hamiltonian Formalism of Spin–Orbit Jahn–Teller and Pseudo-Jahn–Teller Problems in All Axial Symmetries</strong><br/><em>E Pradhan, T Zeng</em><br/>Journal of Chemical Theory and Computation 19 (21), 7776-7786, 2023 <b>(2023)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:YOwf2qJgpHMC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Dicarbonyl anthracenes and phenanthrenes as singlet fission chromophores</strong><br/><em>D James, E Pradhan, S Lee, CH Choi, T Zeng</em><br/>Canadian Journal of Chemistry 100 (7), 520-529, 2022 <b>(2022)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:8k81kl-MbHgC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Design of the smallest intramolecular singlet fission chromophore with the fastest singlet fission</strong><br/><em>E Pradhan, T Zeng</em><br/>The Journal of Physical Chemistry Letters 13 (48), 11076-11085, 2022 <b>(2022)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:3fE2CSJIrl8C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Design of singlet fission chromophores by the introduction of N-oxyl fragments</strong><br/><em>D James, E Pradhan, T Zeng</em><br/>The Journal of Chemical Physics 156 (3), 2022 <b>(2022)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:5nxA0vEk-isC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Postsynthetic crystalline transformation in two-dimensional perovskites via organothiol-based chemistry</strong><br/><em>Z Yuan, L Zhao, E Pradhan, M Lai, T Zeng, Z Yang</em><br/>CCS Chemistry 4 (3), 855-863, 2022 <b>(2022)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:hqOjcs7Dif8C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Unified one-electron Hamiltonian formalism of spin–orbit Jahn–Teller and pseudo-Jahn–Teller problems in tetrahedral and octahedral symmetries</strong><br/><em>E Pradhan, G Yao, Z Yang, T Zeng</em><br/>The Journal of Chemical Physics 157 (6), 2022 <b>(2022)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:MXK_kJrjxJIC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Structure-reactivity studies on hypervalent square-pyramidal dithieno [3, 2-b: 2′, 3′-d] phospholes</strong><br/><em>N Asok, JR Gaffen, E Pradhan, T Zeng, T Baumgartner</em><br/>Dalton Transactions 50 (6), 2243-2252, 2021 <b>(2021)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:Se3iqnhoufwC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>The synthesis, properties, and reactivity of Lewis acidic aminoboranes</strong><br/><em>JN Bentley, SA Simoes, E Pradhan, T Zeng, CB Caputo</em><br/>Organic &amp; Biomolecular Chemistry 19 (21), 4796-4802, 2021 <b>(2021)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:UebtZRa9Y70C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Unified one-electron Hamiltonian formalism of spin–orbit Jahn–Teller and pseudo-Jahn–Teller problems in axial symmetries</strong><br/><em>J Brown, E Pradhan, T Zeng</em><br/>The Journal of Chemical Physics 155 (22), 2021 <b>(2021)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:0EnyYjriUFMC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Diboron-and diaza-doped anthracenes and phenanthrenes: their electronic structures for being singlet fission chromophores</strong><br/><em>E Pradhan, S Lee, CH Choi, T Zeng</em><br/>The Journal of Physical Chemistry A 124 (40), 8159-8172, 2020 <b>(2020)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:roLk4NBRz8UC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Designs of Singlet Fission Chromophores with a Diazadiborinine Framework</strong><br/><em>E Pradhan, JN Bentley, CB Caputo, T Zeng</em><br/>ChemPhotoChem 4 (11), 5279-5287, 2020 <b>(2020)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:LkGwnXOMwfcC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Bis (pentafluorophenyl) phenothiazylborane–an intramolecular frustrated Lewis pair catalyst for stannane dehydrocoupling</strong><br/><em>JN Bentley, E Pradhan, T Zeng, CB Caputo</em><br/>Dalton Transactions 49 (45), 16054-16058, 2020 <b>(2020)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:ufrVoPGSRksC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>The lowest lying excited electronic states for HFCO including a potential energy surface for S 1 in sum-of-products form</strong><br/><em>E Pradhan, A Brown</em><br/>Molecular Physics 118 (12), e1674936, 2020 <b>(2020)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:YsMSGLbcyi4C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Bis (pentafluorophenyl) phenothiazylborane–A Pseudo Frustrated Radical Pair for the Catalytic Dehydrocoupling of Stannanes</strong><br/><em>JN Bentley, E Pradhan, T Zeng, CB Caputo</em><br/> <b>(2020)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:WF5omc3nYNoC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Non-adiabatic molecular dynamics with ΔSCF excited states</strong><br/><em>E Pradhan, K Sato, AV Akimov</em><br/>Journal of Physics: Condensed Matter 30 (48), 484002, 2018 <b>(2018)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:W7OEmFMy1HYC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Charge transfer dynamics at the boron subphthalocyanine chloride/C 60 interface: non-adiabatic dynamics study with Libra-X</strong><br/><em>K Sato, E Pradhan, R Asahi, AV Akimov</em><br/>Physical Chemistry Chemical Physics 20 (39), 25275-25294, 2018 <b>(2018)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:Tyk-4Ss8FVUC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>A ground state potential energy surface for HONO based on a neural network with exponential fitting functions</strong><br/><em>E Pradhan, A Brown</em><br/>Physical Chemistry Chemical Physics 19 (33), 22272-22281, 2017 <b>(2017)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:qjMakFHDy7sC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Fitting potential energy surfaces to sum-of-products form with neural networks using exponential neurons</strong><br/><em>A Brown, E Pradhan</em><br/>Journal of Theoretical and Computational Chemistry 16 (05), 1730001, 2017 <b>(2017)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:IjCSPb-OGe4C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Non-adiabatic molecular dynamics with delta self-consistent field excited states (Delta SCF-NA-MD)</strong><br/><em>E Pradhan</em><br/>ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 254, 2017 <b>(2017)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:zYLM7Y9cAGgC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Vibrational energies for HFCO using a neural network sum of exponentials potential energy surface</strong><br/><em>E Pradhan, A Brown</em><br/>The Journal of Chemical Physics 144 (17), 2016 <b>(2016)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:UeHWp8X0CEIC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Neural network exponential fitting of a potential energy surface with multiple minima: Application to HFCO</strong><br/><em>E Pradhan, A Brown</em><br/>Journal of Molecular Spectroscopy 330, 158-164, 2016 <b>(2016)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:u-x6o8ySG0sC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Scaling relationships for nonadiabatic energy relaxation times in warm dense matter: toward understanding the equation of state</strong><br/><em>E Pradhan, RJ Magyar, AV Akimov</em><br/>Physical Chemistry Chemical Physics 18 (47), 32466-32476, 2016 <b>(2016)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:d1gkVwhDpl0C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Potential Energy Surfaces for Quantum Dynamics Simulations: From ab initio Computations to Vibrational State Determinations</strong><br/><em>E Pradhan</em><br/> <b>(2016)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:9yKSN-GCB0IC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Ab Initio Potential Energy and Dipole Moment Surfaces for CS2: Determination of Molecular Vibrational Energies</strong><br/><em>E Pradhan, JL Carreon-Macedo, JE Cuervo, M Schröder, A Brown</em><br/>The Journal of Physical Chemistry A 117 (32), 6925-6931, 2013 <b>(2013)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;citation_for_view=IxHyb7AAAAAJ:2osOgNQ5qMEC" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Solvation shell dynamics of Na+ and Cl− ion pairs in selected water-DMSO mixtures</strong><br/><em>E Pradhan, BL Tembe</em><br/>Procedia Computer Science 1 (1), 1165-1173, 2010 <b>(2010)</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:u5HHmVD_uO8C" target="_blank">[Read-the-Article]</a></div></li><li style="font-size:16px;"><strong>Supplementary Material for “Neural Network Exponential Fitting of a Potential Energy Surface with Multiple Minima: Application to HFCO”</strong><br/><em>E Pradhan, A Brown</em><br/> <b>()</b> <br/><div class="Sameline"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=IxHyb7AAAAAJ&amp;cstart=20&amp;citation_for_view=IxHyb7AAAAAJ:eQOLeE2rZwMC" target="_blank">[Read-the-Article]</a></div></li></ol>
-</div>
-<!-- The right side box -->
+
+<section>
+  <h2>Selected Publications</h2>
+  <div class="pub-item">
+    <strong>Photoinduced Long-Distance Charge Transfer in Silicanes: The Stacking Matters</strong>
+    <em>G Yao, E Pradhan, Z Yang, T Zeng</em><br>
+    <span>Nano Letters, 2025</span><br>
+    <a href="https://scholar.google.com/..." target="_blank">[Read the Article]</a>
+  </div>
+  <div class="pub-item">
+    <strong>Ligand impacts on band edge energies and excited state splittings of silicane</strong>
+    <em>G Yao, E Pradhan, Z Yang, T Zeng</em><br>
+    <span>Physical Chemistry Chemical Physics, 2025</span><br>
+    <a href="https://scholar.google.com/..." target="_blank">[Read the Article]</a>
+  </div>
+  <!-- Add more publications similarly -->
+  <p style="text-align:center; margin-top:2em;">
+    Full list on <a href="https://scholar.google.com/citations?user=IxHyb7AAAAAJ&hl=en" target="_blank">Google Scholar</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Ekadashi Pradhan | <a href="https://github.com/ekachem" target="_blank" style="color:#fff; text-decoration:underline;">GitHub</a>
+</footer>
+
 </body>
-</body></html>
+</html>
+
